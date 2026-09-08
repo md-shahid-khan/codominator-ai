@@ -12,7 +12,10 @@ const PORT = process.env.PORT || 9001;
 app.use(express.json());
 
 app.get("/health", (req, res) => {
-    return res.status(200).json({message:"Gateway is running", success: true});
+    return res.status(200).json({message:"Auth Service is running", success: true});
+})
+app.get("/", (req, res) => {
+    return res.status(200).json({message:"Auth Service is running", success: true});
 })
 
 app.listen(PORT, async () => {
